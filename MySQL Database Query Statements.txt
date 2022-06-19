@@ -1,0 +1,35 @@
+MySQL Database Query Statements
+
+-Select all the records from the "Customers" table
+SELECT * FROM customer
+
+-Get distinct countries from the Customers table
+SELECT DISTINCT country_region FROM customers
+
+-Get all the records from the table Customers where the Customer’s ID starts with “BL”.
+SELECT * FROM customers WHERE id = "BL";
+
+
+-Get the first 100 records of the orders table.
+SELECT * FROM customers ORDER BY ID LIMIT 10;
+
+-Get all customers that live in the postal codes 1010, 3012, 12209, and 05023
+SELECT * FROM customers WHERE zip_postal_code = "1010, 3012, 12209, 05023";
+
+-Get all orders where the ShipRegion is not equal to NULL.
+There was no ShipRegion in the database.
+
+-Get all customers ordered by the country, then by the city.
+SELECT * FROM customers ORDER BY country_region AND city;
+
+-Add a new customer to the customers table.
+INSERT INTO customers (id, company, last_name, first_name) values ('30', 'Company Z', 'Dumpty', 'Humpty');
+
+-Update all ShipRegion to the value ‘EuroZone’ in the Orders table, where the ShipCountry is equal to France.
+There was no ShipRegion in the database.
+
+The rest of the categories was not a part of the database.
+
+
+
+
